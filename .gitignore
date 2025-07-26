@@ -88,8 +88,7 @@ dist
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
+# Comment in the public line if your project uses Gatsby and not Next.js
 # public
 
 # vuepress build output
@@ -117,4 +116,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-.idea
+# IDE folders
+.idea/
+.vscode/
+
+# macOS system files
+.DS_Store
