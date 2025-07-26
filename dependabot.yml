@@ -1,6 +1,26 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" 
-    directory: "/" #
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
       interval: "daily"
+      time: "02:00"         # Check every day at 2 AM UTC
+      days: ["monday", "wednesday", "friday"]  # Optional: limit days for less noise
+    open-pull-requests-limit: 5
+    # Automatically label Dependabot PRs
+    labels:
+      - "dependencies"
+      - "automated update"
+    # Assign a team or user to review
+    reviewers:
+      - your-github-username  # replace with your GitHub username or team name
+    # Auto-merge minor and patch updates after passing checks
+    automerge: true
+    automerge-type: "pr"
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    ignore:
+      - dependency-name: "some-big-package"
+        versions:
+          - ">=2.0.0"
