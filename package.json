@@ -1,0 +1,19 @@
+{
+  "name": "minecraft-afk-bot",
+  "version": "2.1",
+  "description": "Afk bot for minecraft servers with advanced AI features.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lamgerr",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mineflayer": "^4.30.0",
+    "mineflayer-collectblock": "^1.6.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "vec3": "^0.1.10"
+  }
+}

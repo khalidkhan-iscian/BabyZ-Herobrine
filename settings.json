@@ -1,0 +1,46 @@
+{
+  "bot-account": {
+    "username": "Guardian",
+    "password": "",
+    "type": "mojang"
+  },
+
+  "server": {
+    "ip": "ISCIANSSMP.aternos.me",
+    "port": 44931,
+    "version": "1.12.1"
+  },
+
+  "base": {
+    "x": 100,
+    "y": 64,
+    "z": 100,
+    "radius": 12
+  },
+
+  "utils": {
+    "auto-auth": {
+      "enabled": false,
+      "password": ""
+    },
+
+    "anti-afk": {
+      "enabled": true,
+      "sneak": true
+    },
+
+    "chat-messages": {
+      "enabled": true,
+      "repeat": true,
+      "repeat-delay": 60,
+      "messages": [
+        "Khalider Base e No Entry!",
+        "No griefing at Khalid's Base!"
+      ]
+    },
+
+    "chat-log": true,
+    "auto-reconnect": true,
+    "auto-reconnect-delay": 5000
+  }
+}

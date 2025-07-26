@@ -1,0 +1,42 @@
+language = "nix"
+run = "node index.js"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Mineflayer"
+mode = "parallel"
+author = 45158004
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install mineflayer mineflayer-pathfinder mineflayer-collectblock vec3 express"
+
+[[workflows.workflow]]
+name = "NVM"
+mode = "sequential"
+author = 45158004
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "wget https://nodejs.org/dist/latest-v22.x/node-v22.9.0-linux-x64.tar.xz"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "tar -xf node-v22.9.0-linux-x64.tar.xz"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "export PATH=$PWD/node-v22.9.0-linux-x64/bin:$PATH"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node -v"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Mineflayer"
